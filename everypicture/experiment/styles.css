@@ -50,7 +50,7 @@ svg {
 #crowd {
     filter: sepia(25%) saturate(130%);
 }
-/* the person's photo is tall (540 x 720), so it fills the HEIGHT
+/* the person's photo is tall (540 x 720), so it fills the height
    of the frame and gets centered, instead of being stretched wide.*/
 #portrait {
     position: absolute;

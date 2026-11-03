@@ -1,20 +1,18 @@
 (function () {
     'use strict';
 
-    // DOM elements 
     const people = document.querySelectorAll('svg rect');
     const portrait = document.querySelector('#portrait');
     const whisper = document.querySelector('#whisper');
 
     // every rect in the SVG map gets two listeners:
-    // pointerenter (mouse goes onto the person) shows their photo,
-    // pointerleave (mouse goes off the person) hides it again
+    // mouse goes onto the person, mouse goes off the person hides it again
     for (const eachPerson of people) {
     eachPerson.addEventListener('mouseover', showPerson);
     eachPerson.addEventListener('mouseout', hidePerson);    }
 
     // event.target is the rect the mouse went onto,
-    // so its id tells us WHO it is
+    // so its id tells us who it is
     function showPerson(event) {
         const thisPerson = event.target.id;
         console.log(thisPerson);
