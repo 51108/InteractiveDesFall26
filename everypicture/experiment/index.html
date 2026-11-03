@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Redressed&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Sonder</h1>
+        <p>Everyone in the crowd has a life as vivid as yours. Hover over a stranger.</p>
+    </header>
+
+    <main>
+        <!-- the container holds everything stacked on top of each other:
+             1. the crowd photo (bottom)
+             2. the person's own photo (hidden until you hover)
+             3. the likes/dislikes text
+             4. the invisible SVG map (top, so it catches the mouse) -->
+        <div class="container">
+            <img src="images/crowd.jpg" alt="a blurred crowd of strangers on a street at night" width="960" height="720" id="crowd">
+            <img src="images/likes1-y.jpg" alt="close-up of one of the strangers" width="540" height="720" id="portrait" class="hidden">
+            <p id="whisper" class="hidden"></p>
+
+            <!-- SVG image map  -->
+            <svg viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="480" width="130" height="240" fill="#D9D9D9" id="yovi"/>
+                <rect x="320" y="470" width="90" height="170" fill="#D9D9D9" id="zosia"/>
+                <rect x="750" y="480" width="160" height="240" fill="#D9D9D9" id="audrey"/>
+            </svg>
+        </div>
+    </main>
+</body>
+
+</html>
