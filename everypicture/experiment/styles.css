@@ -25,7 +25,7 @@ header p {
    match the crowd photo so the SVG shapes stay on top
    of the right people when the window changes size.
    position: relative lets everything inside be pinned to its corner. */
-   
+
 .container {
     position: relative;
     max-width: 820px;
@@ -89,7 +89,6 @@ svg {
     font-style: normal;
     color:#b3261e;
 }
-/*  person's name in Amélie red */
 
 .hidden {
     opacity: 0;
