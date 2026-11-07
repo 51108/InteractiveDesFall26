@@ -1,0 +1,189 @@
+
+body {
+    font-family: 'Caudex', serif;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #f3e6c4;
+    background-color: #0c1f15;
+}
+
+h1,
+h2 {
+    font-family: 'Redressed', cursive;
+    font-weight: normal;
+    line-height: 1;
+    color: #e2b04a;
+    text-shadow: 0 0 12px rgba(226, 176, 74, 0.5);
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: 7rem;
+}
+
+#crowd-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* object-fit: cover makes the photo fill the whole screen without
+   stretching. object-position: bottom
+   keeps the bottom of the photo, where the people are, on screen.
+   The transition makes every class change glide over 3 seconds. */
+#crowd-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    transition: all 3s ease;
+}
+/* transform-origin is the point the photo grows from. 0% 0% is the top left corner,
+   100% 100% is the bottom right. Setting it on a person and then
+   scaling makes the photo zoom in toward that person.
+
+   The crowd is dim. As the photo zooms in, it gets brighter,
+   so the person "comes into focus" */
+.crowd {
+    transform: scale(1);
+    filter: brightness(0.6) sepia(25%) saturate(130%);
+}
+
+/* Yovi: bottom left */
+.yovi {
+    transform: scale(2.5);
+    transform-origin: 7% 78%;
+    filter: brightness(1) sepia(25%) saturate(130%);
+}
+
+/* Zosia: middle, toward the bottom */
+.zosia {
+    transform: scale(2.5);
+    transform-origin: 38% 71%;
+    filter: brightness(1) sepia(25%) saturate(130%);
+}
+
+/* Audrey: bottom right */
+.audrey {
+    transform: scale(2.5);
+    transform-origin: 86% 78%;
+    filter: brightness(1) sepia(25%) saturate(130%);
+}
+
+/* Eleanor: the middle for now. */
+.eleanor {
+    transform: scale(2.5);
+    transform-origin: 50% 75%;
+    filter: brightness(1) sepia(25%) saturate(130%);
+}
+
+
+/* scrolling text sections */
+
+/* main sits on top of the fixed photo (position + z-index),
+   so the text and the likes/dislikes screens scroll over it. */
+main {
+    position: relative;
+    z-index: 1;
+}
+
+/* Each section is one full screen tall, so every scroll "step" is
+   one moment of the story. Flexbox centers the text up and down,
+   and lines it up on the left. */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 0 6vw;
+}
+
+/* the title sits in the middle of the first screen */
+header {
+    align-self: center;
+    text-align: center;
+}
+
+/* the narration lines are little caption cards over the photo */
+section p {
+    max-width: 26rem;
+    margin: 0 0 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    background-color: rgba(12, 31, 21, 0.8);
+}
+header p {
+    max-width: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+
+/* likes and dislikes */
+
+/* These sections have a solid background, so as they scroll up
+   they cover the photo and fill the whole screen. */
+.profile {
+    align-items: stretch;
+    padding: 6vh 10vw;
+    background: radial-gradient(circle at center, #6e1a14, #2a0705);
+}
+
+/* Grid makes two equal columns: the like photo on the left and the
+   dislike photo on the right. The name stretches across both
+   columns */
+.profile article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5vw;
+}
+
+.profile h2 {
+    grid-column: 1 / 3;
+    margin: 0 0 1.5rem;
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+/* Flexbox stacks the photo on top of its caption and centers them
+   in their column. */
+.profile figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+/* 
+   The background color shows as an empty box for photos that
+   aren't added yet, so the layout still works. */
+.profile img {
+    width: auto;
+    height: 58vh;
+    background-color: rgba(243, 230, 196, 0.12);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* max-width keeps the caption about as wide as the photo above it */
+.profile figcaption {
+    max-width: 44vh;
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.profile h3 {
+    margin: 0 0 0.3rem;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: 0.15em;
+    color: #e2b04a;
+}

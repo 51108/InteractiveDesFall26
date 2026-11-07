@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonder - Every Picture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400&family=Redressed&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Each person gets three sections:
+         1. an empty section, where the photo zooms in on them
+         2. their card, with a like photo and a dislike photo
+         3. an empty section, where the photo zooms back out to the crowd -->
+    <main>
+        <!-- the whole crowd (photo class: crowd) -->
+        <section>
+            <header>
+                <h1>Sonder</h1>
+                <p>Everyone in the crowd has a life as vivid as yours.</p>
+                <p>Scroll to look a little closer.</p>
+            </header>
+        </section>
+
+
+        <!-- zoom in on Yovi (photo class: yovi) -->
+        <section></section>
+
+        <section class="profile">
+            <article>
+                <h2>Yovi</h2>
+                <figure>
+                    <img src="images/yovi-like.jpg" alt="Yovi in a blue jacket, drawing on a fogged-up mirror" width="540" height="720">
+                    <figcaption>
+                        <h3>likes</h3>
+                        drawing on fogged-up glass
+                    </figcaption>
+                </figure>
+                <figure>
+                    <!-- to be added still: images/yovi-dislike.jpg (540 x 720) -->
+                    <img src="images/yovi-dislike.jpg" alt="Yovi's dislike photo" width="540" height="720">
+                    <figcaption>
+                        <h3>dislikes</h3>
+                        chargers that only work at a certain angle
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- back out to the crowd (photo class: crowd) -->
+        <section></section>
+
+
+        <!-- zoom in on Zosia (photo class: zosia) -->
+        <section></section>
+
+        <section class="profile">
+            <article>
+                <h2>Zosia</h2>
+                <figure>
+                    <!-- to be added still: images/zosia-like.jpg (540 x 720) -->
+                    <img src="images/zosia-like.jpg" alt="Zosia's like photo" width="540" height="720">
+                    <figcaption>
+                        <h3>likes</h3>
+                        being mistaken for a local when traveling
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/zosia-dislike.jpg" alt="Zosia standing on a kitchen counter, leaning into the light" width="540" height="720">
+                    <figcaption>
+                        <h3>dislikes</h3>
+                        the gap between the fridge and the counter where things fall forever
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- back out to the crowd (photo class: crowd) -->
+        <section></section>
+
+
+        <!-- zoom in on Audrey (photo class: audrey) -->
+        <section></section>
+
+        <section class="profile">
+            <article>
+                <h2>Audrey</h2>
+                <figure>
+                    <!-- to be added still: images/audrey-like.jpg (540 x 720) -->
+                    <img src="images/audrey-like.jpg" alt="Audrey's like photo" width="540" height="720">
+                    <figcaption>
+                        <h3>likes</h3>
+                        peeling tangerines in one piece
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="images/audrey-dislike.jpg" alt="Audrey sitting on a washing machine with her fingers in her ears" width="540" height="720">
+                    <figcaption>
+                        <h3>dislikes</h3>
+                        the sound her laundry machine makes three-quarters of the way through
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <!-- back out to the crowd (photo class: crowd) -->
+        <section></section>
+
+
+        <!-- zoom in on Eleanor (photo class: eleanor) -->
+        <section></section>
+
+        <section class="profile">
+            <article>
+                <h2>Eleanor</h2>
+                <figure>
+                    <!-- to be added still: images/eleanor-like.jpg (540 x 720) -->
+                    <img src="images/eleanor-like.jpg" alt="Eleanor's like photo" width="540" height="720">
+                    <figcaption>
+                        <h3>likes</h3>
+                        when two songs she likes have the same BPM, so they're easy to mix
+                    </figcaption>
+                </figure>
+                <figure>
+                    <!-- to be added still: images/eleanor-dislike.jpg (540 x 720) -->
+                    <img src="images/eleanor-dislike.jpg" alt="Eleanor's dislike photo" width="540" height="720">
+                    <figcaption>
+                        <h3>dislikes</h3>
+                        people who tap on fish tanks
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+
+
+        <!-- the whole crowd again (photo class: crowd) -->
+        <section>
+            <p>Every stranger here has a list like this.</p>
+            <p>You walked right past them.</p>
+        </section>
+    </main>
+
+    <figure id="crowd-photo">
+        <img src="images/crowd.jpg" alt="a black-and-white crowd of people blurred as they walk" width="1400" height="788" class="crowd">
+    </figure>
+</body>
+
+</html>
